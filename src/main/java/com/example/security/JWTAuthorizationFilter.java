@@ -34,6 +34,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 				.parseClaimsJws(jwt.replace(Constants.TOKEN_PREFIX, "")).getBody();
 		String username = claims.getSubject();
 		System.out.println("username : " + claims);
+		// claims.get("role") role se trouve dans JWT le titre des autorites
 		@SuppressWarnings("unchecked")
 		ArrayList<Map<String, String>> roles = (ArrayList<Map<String, String>>) claims.get("role");
 		Collection<GrantedAuthority> authorities = new ArrayList<>();
