@@ -1,6 +1,7 @@
 HELP.md
 target/
 mvnw/
+FrontEnd/
 mvnw.cmd/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
